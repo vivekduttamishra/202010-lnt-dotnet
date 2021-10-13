@@ -1,0 +1,10 @@
+private/ 
+private/ 
+*.tmp 
+bin/ 
+obj/ 
+debug/ 
+*.tmp 
+*.dll 
+*.exe 
+*.obj 
