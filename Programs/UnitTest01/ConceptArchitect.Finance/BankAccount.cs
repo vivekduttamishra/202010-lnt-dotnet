@@ -43,7 +43,7 @@ namespace ConceptArchitect.Finance
         {
             if (amount > 0)
             {
-                Balance += amount;
+                //Balance += amount;
                 //Console.WriteLine("amount deposited");
                 return true;
             }
@@ -57,7 +57,7 @@ namespace ConceptArchitect.Finance
 
         public bool Withdraw(double amount, string password)
         {
-            if (amount <= 0)
+            if (amount<=0)
             {
                 //Console.WriteLine("can't withdraw negative amount");
                 return false;

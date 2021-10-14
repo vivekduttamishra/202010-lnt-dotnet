@@ -49,6 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankAccountAssert.cs" />
+    <Compile Include="BankAccountTests2.cs" />
     <Compile Include="BankAccountTests.cs" />
     <Compile Include="BankAccountV1Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
