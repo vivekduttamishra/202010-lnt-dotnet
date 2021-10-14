@@ -2,7 +2,6 @@ private/
 private/ 
 *.tmp 
 bin/ 
-packages/
 TestResults/ 
 obj/ 
 debug/ 
