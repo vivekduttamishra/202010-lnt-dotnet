@@ -1,15 +1,16 @@
-﻿using ConceptArchitect.Finance;
+﻿using ConceptArchitect.Finance.V2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Shouldly;
 using System.Threading.Tasks;
 
 namespace TestFinanceMST
 {
     [TestClass]
-    public class BankAccountTests
+    public class BankAccountV2Tests
     {
         string name = "Vivek Dutta Mishra";
         string password = "password";
@@ -57,7 +58,10 @@ namespace TestFinanceMST
 
             //Assert Logic here
             Assert.IsFalse(result);
-            Assert.AreEqual(initialBalance, account.Balance);
+           // Assert.AreEqual(100, account.Balance);
+
+
+            account.Balance.ShouldBe(100);
 
             
         }

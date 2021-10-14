@@ -1,5 +1,6 @@
-﻿using ConceptArchitect.Finance;
+﻿using ConceptArchitect.Finance.V2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace TestFinanceMST
 {
     [TestClass]
-    public class BankAccountTests2
+    public class BankAccountV2Tests2
     {
 
         string name = "Vivek Dutta Mishra";
@@ -17,13 +18,13 @@ namespace TestFinanceMST
         double initialBalance = 20000;
         double rate = 12;
         BankAccount account;
-        BankAccountAssert accountAsssert;
+        BankAccountAssertV2 accountAsssert;
 
         [TestInitialize]
         public void BeforeEach()
         {
              account= new BankAccount(1, name, password, initialBalance, rate);
-             accountAsssert = new BankAccountAssert(account);
+             accountAsssert = new BankAccountAssertV2(account);
         }
 
         

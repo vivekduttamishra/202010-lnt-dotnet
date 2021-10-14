@@ -1,4 +1,4 @@
-﻿using ConceptArchitect.Finance;
+﻿using ConceptArchitect.Finance.V2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace TestFinanceMST
 {
-    class BankAccountAssert
+    class BankAccountAssertV2
     {
         BankAccount account;
         double initialBalance;
-        public BankAccountAssert(BankAccount account)
+        public BankAccountAssertV2(BankAccount account)
         {
             this.account = account;
             this.initialBalance = account.Balance;

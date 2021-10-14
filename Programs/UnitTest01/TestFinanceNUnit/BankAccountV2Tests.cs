@@ -1,4 +1,4 @@
-﻿using ConceptArchitect.Finance;
+﻿using ConceptArchitect.Finance.V2;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace TestFinanceNUnit
 {
     [TestFixture]
-    public class BankAccountTests
+    public class BankAccountV2Tests
     {
 
 
@@ -55,7 +55,7 @@ namespace TestFinanceNUnit
             var result = account.Withdraw(1, "wrong-password");
 
             //Assert Logic here
-            Assert.That(result, Is.True);                               //Assert.IsFalse(result);
+            Assert.That(result, Is.False);                               //Assert.IsFalse(result);
             Assert.That(account.Balance, Is.EqualTo(initialBalance));   //Assert.AreEqual(initialBalance, account.Balance);
 
 
@@ -105,6 +105,24 @@ namespace TestFinanceNUnit
         }
 
 
+        [Test]
+       public void WeCanWithdrawAllTheMoneyWeHaveWithRightCredentials()
+        {
+            account.Withdraw(initialBalance, password);
+
+            //Assert.AreEqual(0, account.Balance);
+            Assert.That(account.Balance, Is.EqualTo(0));
+        }
+
+        [Test(ExpectedResult = 0)]
+        public double WeCanWithdrawEntireMoneyWithTheRightCredential()
+        {
+            account.Withdraw(initialBalance, password);
+
+            return account.Balance; //actual value
+        }
+
+
 
         //[Ignore]
         [Test]
@@ -133,6 +151,9 @@ namespace TestFinanceNUnit
             Assert.AreEqual(initialBalance, account.Balance);
 
         }
+
+
+
 
 
 

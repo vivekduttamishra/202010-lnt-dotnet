@@ -19,7 +19,7 @@ namespace ConceptArchitect.Finance
         public double Balance
         {
             get { return balance; }
-            private set { value = value; }
+            private set { balance = value; }
         }
 
         public BankAccountV1(int accountNumber, string name, string password, double balance, double interestRate)
@@ -49,6 +49,7 @@ namespace ConceptArchitect.Finance
             }
             else
             {
+                balance -= amount;
                 Console.WriteLine("Please collect your cash");
             }
         }

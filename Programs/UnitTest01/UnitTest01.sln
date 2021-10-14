@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFinanceMST", "TestFinan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFinanceNUnit", "TestFinanceNUnit\TestFinanceNUnit.csproj", "{23AE3BC5-61CB-4FD1-922A-2542294E8AEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceptArchitect.Collections", "ConceptArchitect.Collections\ConceptArchitect.Collections.csproj", "{334218D9-FA64-4494-81B9-5C2C33DEE88A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{23AE3BC5-61CB-4FD1-922A-2542294E8AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23AE3BC5-61CB-4FD1-922A-2542294E8AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23AE3BC5-61CB-4FD1-922A-2542294E8AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334218D9-FA64-4494-81B9-5C2C33DEE88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334218D9-FA64-4494-81B9-5C2C33DEE88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334218D9-FA64-4494-81B9-5C2C33DEE88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334218D9-FA64-4494-81B9-5C2C33DEE88A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
