@@ -53,7 +53,7 @@ namespace TestFinance
         {
             try
             {
-                var result = SimpleMath.Divide(9, 1);  //should throw an exception!
+                var result = SimpleMath.Divide(9, 0);  //should throw an exception!
                 //Oh! we reached here. That mean exception was not thrown
                 throw new AssertFailedException("Excpected Exception DivisioByZero was not thrown");
             }
@@ -69,7 +69,7 @@ namespace TestFinance
         [ExpectedException(typeof(DivideByZeroException))]
         public void DivideByZeroShouldThrowDivideByZeroException()
         {
-            SimpleMath.Divide(9, 1); //should throw the exception
+            SimpleMath.Divide(9, 0); //should throw the exception
         }
     }
 }
