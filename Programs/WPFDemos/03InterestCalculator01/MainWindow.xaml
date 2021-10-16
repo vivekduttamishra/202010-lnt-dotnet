@@ -1,0 +1,32 @@
+﻿<Window x:Class="_03InterestCalculator01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03InterestCalculator01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="111,80,0,0" TextWrapping="Wrap" Text="Principal Amount" VerticalAlignment="Top" Height="35" Width="139"/>
+        <TextBox x:Name="principalTextBox" HorizontalAlignment="Left" Height="23" Margin="255,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,139,0,0" TextWrapping="Wrap" Text="Rate (p.a)" VerticalAlignment="Top" Height="35" Width="139"/>
+        <TextBox x:Name="rateTextBox" HorizontalAlignment="Left" Height="23" Margin="255,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,199,0,0" TextWrapping="Wrap" Text="Period (Months)" VerticalAlignment="Top" Height="35" Width="139"/>
+        <TextBox x:Name="periodTextBox" HorizontalAlignment="Left" Height="23" Margin="255,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,289,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Height="35" Width="139"/>
+        <TextBox x:Name="interestTextBox" HorizontalAlignment="Left" Height="23" Margin="255,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,345,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Height="35" Width="139"/>
+        <TextBox x:Name="amountTextBox" HorizontalAlignment="Left" Height="23" Margin="255,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="calculateInterestButton" Content="Button" HorizontalAlignment="Left" Margin="117,239,0,0" VerticalAlignment="Top" Width="260" Height="33" RenderTransformOrigin="0.5,0.5" Click="calculateInterestButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.361"/>
+                    <RotateTransform Angle="-0.181"/>
+                    <TranslateTransform X="-0.535" Y="0.002"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>
