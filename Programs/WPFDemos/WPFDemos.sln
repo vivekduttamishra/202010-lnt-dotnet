@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01WinFormSICalculator", "WindowsFormsApp1\01WinFormSICalculator.csproj", "{8D1ED014-DB91-487F-99C2-37F3049861DC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02HelloWinForm", "02HelloWinForm\02HelloWinForm.csproj", "{7EA3175C-340E-4198-A24A-12A7B5F8BA11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03InterestCalculator01", "03InterestCalculator01\03InterestCalculator01.csproj", "{00B81D12-44D2-4E1D-8483-EEFE3F525310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01WinFormSICalculator", "01WinFormsSICalculator01\01WinFormSICalculator.csproj", "{8D1ED014-DB91-487F-99C2-37F3049861DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01WinFormSICalculator02", "01WinFormSICalculator02\01WinFormSICalculator02.csproj", "{9D14CC9B-FA4C-4792-A812-2E79F55CB537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF01HelloWorld", "WPF01HelloWorld\WPF01HelloWorld.csproj", "{FB0025F6-6CBE-476D-8B09-7D05C8295D75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8D1ED014-DB91-487F-99C2-37F3049861DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D1ED014-DB91-487F-99C2-37F3049861DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D1ED014-DB91-487F-99C2-37F3049861DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D1ED014-DB91-487F-99C2-37F3049861DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7EA3175C-340E-4198-A24A-12A7B5F8BA11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7EA3175C-340E-4198-A24A-12A7B5F8BA11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EA3175C-340E-4198-A24A-12A7B5F8BA11}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +27,18 @@ Global
 		{00B81D12-44D2-4E1D-8483-EEFE3F525310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00B81D12-44D2-4E1D-8483-EEFE3F525310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00B81D12-44D2-4E1D-8483-EEFE3F525310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1ED014-DB91-487F-99C2-37F3049861DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1ED014-DB91-487F-99C2-37F3049861DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1ED014-DB91-487F-99C2-37F3049861DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1ED014-DB91-487F-99C2-37F3049861DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D14CC9B-FA4C-4792-A812-2E79F55CB537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D14CC9B-FA4C-4792-A812-2E79F55CB537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D14CC9B-FA4C-4792-A812-2E79F55CB537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D14CC9B-FA4C-4792-A812-2E79F55CB537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB0025F6-6CBE-476D-8B09-7D05C8295D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB0025F6-6CBE-476D-8B09-7D05C8295D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB0025F6-6CBE-476D-8B09-7D05C8295D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB0025F6-6CBE-476D-8B09-7D05C8295D75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
