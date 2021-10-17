@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPF04Layouts.DockPanelDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF04Layouts"
+        mc:Ignorable="d"
+        Title="DockPanelDemo" Height="450" Width="500">
+    <DockPanel LastChildFill="True">
+
+        <Button Background="Black" Foreground="White" Content="App Title" DockPanel.Dock="Top" />
+        <Button Background="Gray" Foreground="White" Content="Status Bar" DockPanel.Dock="Bottom" />
+        <Button Background="Azure" Content="Left Icons"/>
+        <Button Background="LightPink" Foreground="White" Content="Bottom Bar" DockPanel.Dock="Bottom" />
+        <Button Background="LightGreen" Foreground="White" Content="Icons" DockPanel.Dock="Right" />
+        <Button Background="LightBlue" Foreground="White" Content="Top 2" DockPanel.Dock="Top" />
+        <Button Background="LightYellow" Content="Main Content" />
+
+    </DockPanel>
+</Window>

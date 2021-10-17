@@ -30,15 +30,20 @@
                     >Show Details</Button>
         <!--</StackPanel.Children>-->
 
-        <TextBlock Text="Title" Foreground="CornflowerBlue" FontSize="20"/>
-        <TextBlock x:Name="titleText" Foreground="Coral" FontSize="15"/>
+        <UniformGrid Columns="2" Margin="5,10,80,0">
 
-        <TextBlock Text="Author" Foreground="CornflowerBlue" FontSize="20"/>
-        <TextBlock x:Name="authorText" Foreground="Coral" FontSize="15"/>
+            <TextBlock Text="Title"     Foreground="CornflowerBlue" FontSize="20"/>
+            <TextBlock x:Name="titleText"  Foreground="Coral" FontSize="15"/>
 
-        <TextBlock Text="Price" Foreground="CornflowerBlue" FontSize="20"/>
-        <TextBlock x:Name="priceText" Foreground="Coral" FontSize="15"/>
+            <TextBlock Text="Author" Foreground="CornflowerBlue" FontSize="20"/>
+            <TextBlock x:Name="authorText" Foreground="Coral" FontSize="15"/>
 
+            <TextBlock Text="Price" Foreground="CornflowerBlue" FontSize="20"/>
+            <TextBlock x:Name="priceText" Foreground="Coral" FontSize="15"/>
+
+        </UniformGrid>
+        
+        
 
     </StackPanel>
 
