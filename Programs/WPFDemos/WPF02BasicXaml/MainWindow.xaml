@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPF02BasicXaml.MainWindow" x:Name="w1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF02BasicXaml"
+        xmlns:b="clr-namespace:ConceptArchitect.BooksApi"
+        mc:Ignorable="d"
+        Title="Welcome to WPF"
+        Height="250" Width="400">
+
+
+    <ListBox>
+        <!--<ListBox.Items>-->
+            <b:Book Title="The Accursed God" Author="Vivek Dutta Mishra" Price="399" />
+            <Label>
+                <b:Book Title="Rashmirathi" Author="Ramdhari Singh Dinkar" Price="159" />                
+            </Label>
+            <Button>
+                <b:Book Title="The Count of Monte Cristo" Author="Alexandre Dumas" Price="350" />
+            </Button>
+        <!--</ListBox.Items>-->        
+    </ListBox>
+   
+</Window>
