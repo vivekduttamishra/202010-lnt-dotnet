@@ -16,7 +16,7 @@
                        TextAlignment="Center"
                        
                        >Book List</TextBlock>
-            <ListBox Margin="5,10">
+            <ListBox Margin="5,10" x:Name="bookList">
 
                 <model:Book Title="The Accursed God" Author="Vivek Dutta Mishra" Price="399" />
                 <model:Book Title="Rashmirathi" Author="Ramdhari Singh Dinkar" Price="159" />
@@ -26,8 +26,20 @@
             <Button Margin="10" 
                     FontSize="20"
                     Background="Black" Foreground="coral"
+                    Click="handleShowBookDetail"
                     >Show Details</Button>
         <!--</StackPanel.Children>-->
+
+        <TextBlock Text="Title" Foreground="CornflowerBlue" FontSize="20"/>
+        <TextBlock x:Name="titleText" Foreground="Coral" FontSize="15"/>
+
+        <TextBlock Text="Author" Foreground="CornflowerBlue" FontSize="20"/>
+        <TextBlock x:Name="authorText" Foreground="Coral" FontSize="15"/>
+
+        <TextBlock Text="Price" Foreground="CornflowerBlue" FontSize="20"/>
+        <TextBlock x:Name="priceText" Foreground="Coral" FontSize="15"/>
+
+
     </StackPanel>
 
 
