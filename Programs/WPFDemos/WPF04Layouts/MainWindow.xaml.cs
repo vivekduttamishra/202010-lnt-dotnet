@@ -49,5 +49,11 @@ namespace WPF04Layouts
             var win = new CanvasDemo();
             win.Show();
         }
+
+        private void GridDemo(object sender, RoutedEventArgs e)
+        {
+            var win = new GridDemo();
+            win.Show();
+        }
     }
 }
