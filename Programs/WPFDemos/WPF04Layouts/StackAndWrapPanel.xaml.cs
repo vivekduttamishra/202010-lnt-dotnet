@@ -17,9 +17,9 @@ namespace WPF04Layouts
     /// <summary>
     /// Interaction logic for StackPanelDemo.xaml
     /// </summary>
-    public partial class StackPanelDemo : Window
+    public partial class StackAndWrapPanel : Window
     {
-        public StackPanelDemo()
+        public StackAndWrapPanel()
         {
             InitializeComponent();
         }

@@ -27,7 +27,7 @@ namespace WPF04Layouts
 
         private void ShowStackPanelDemo(object sender, RoutedEventArgs e)
         {
-            var win = new StackPanelDemo();
+            var win = new StackAndWrapPanel();
             win.Show();
 
         }
@@ -41,6 +41,12 @@ namespace WPF04Layouts
         private void ShowDockPanelDemo(object sender, RoutedEventArgs e)
         {
             var win = new DockPanelDemo();
+            win.Show();
+        }
+
+        private void CanvasDemo(object sender, RoutedEventArgs e)
+        {
+            var win = new CanvasDemo();
             win.Show();
         }
     }
