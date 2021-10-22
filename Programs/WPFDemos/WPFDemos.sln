@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf09ResourcesAndRoutedEven
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf10BindingFeatures", "Wpf10BindingFeatures\Wpf10BindingFeatures.csproj", "{609B4264-5189-42B5-B7BC-B9A30BE0AC38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntCalc04DataContext", "IntCalc04DataContext\IntCalc04DataContext.csproj", "{5D543477-C40F-4BA4-9F12-441B2DD02D72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{609B4264-5189-42B5-B7BC-B9A30BE0AC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{609B4264-5189-42B5-B7BC-B9A30BE0AC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{609B4264-5189-42B5-B7BC-B9A30BE0AC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D543477-C40F-4BA4-9F12-441B2DD02D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D543477-C40F-4BA4-9F12-441B2DD02D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D543477-C40F-4BA4-9F12-441B2DD02D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D543477-C40F-4BA4-9F12-441B2DD02D72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +154,7 @@ Global
 		{DFB0B31E-7E0B-4B13-8AEC-CC773D714A79} = {883F4F8F-59F7-4680-9C10-62C3D381E81F}
 		{E6076E00-F269-4924-AAB4-F17265087241} = {883F4F8F-59F7-4680-9C10-62C3D381E81F}
 		{609B4264-5189-42B5-B7BC-B9A30BE0AC38} = {883F4F8F-59F7-4680-9C10-62C3D381E81F}
+		{5D543477-C40F-4BA4-9F12-441B2DD02D72} = {0E8ED7C0-B093-47FA-A709-F75A51EC1DE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {751F2633-CBC4-4DEE-B646-333FF49CF3A6}
