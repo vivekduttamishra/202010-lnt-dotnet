@@ -11,7 +11,7 @@
 
         <StackPanel.Resources>
             <b:Book x:Key="book"                    
-                        Title="Unknown Book" 
+                        Title="Book 1" 
                         Author="Unknown Author" 
                         Price="0" />
 

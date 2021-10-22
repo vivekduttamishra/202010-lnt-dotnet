@@ -1,0 +1,53 @@
+﻿<Window x:Class="Wpf10BindingFeatures.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf10BindingFeatures"
+        xmlns:util="clr-namespace:ConceptArchitect.Wpf;assembly=ConceptArchitect.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+
+    <Window.Resources>
+        <util:BooleanInverter x:Key="boolInverse" />
+    </Window.Resources>
+    
+    <StackPanel Margin="20"> 
+        <CheckBox x:Name="check1" Content="Enable Button1" IsChecked="True"/>
+        <Button  Content="Enable Me Using Check Box" IsEnabled="{Binding IsChecked,ElementName=check1}"/>
+        <TextBlock/>
+
+        <Label Content="Type True/False to enable/disable"/>
+        <TextBox x:Name="enableTextBox1" />
+        <Button  Content="Type False to Disable Me" IsEnabled="{Binding Text, ElementName=enableTextBox1}"/>
+        <TextBlock/>
+
+        <CheckBox x:Name="check3" Content="Disable Button3"  />
+        <Button  Content="Dispable Me By Checking The Check Box" 
+                 IsEnabled="{Binding IsChecked,ElementName=check3,Converter={StaticResource boolInverse}}"/>
+        <TextBlock/>
+
+        <CheckBox x:Name="check4" Content="Show Button" />
+        <Button  Content="Hide Me by unchecking the  Checkbox" >
+            <Button.Visibility>
+                <Binding Path="IsChecked" ElementName="check4">
+                    <Binding.Converter>
+                        <util:BoolToVisibilityConverter DefaultInvisibleMode="Hidden"/>
+                    </Binding.Converter>
+                </Binding>
+            </Button.Visibility>
+        </Button>
+        <TextBlock/>
+
+        <CheckBox x:Name="check5" Content="Collapse Button" />
+        <Button  Content="Collapse Me using CheckBox" 
+                 Visibility="{Binding IsChecked,ElementName=check5,Converter={util:BoolToVisibilityConverter Invert=True,DefaultInvisibleMode=Collapsed}}"/>
+        <TextBlock/>
+
+        <CheckBox x:Name="check6" Content="Hide Button" />
+        <Button  Content="Hide Me By checking the Box" 
+                 Visibility="{Binding IsChecked,ElementName=check6, Converter={util:BoolToVisibilityConverter Invert=True}}"/>
+        <TextBlock Text="This is to show Hide/Collapse"/>
+
+    </StackPanel>
+</Window>
