@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceptArchitect.Services.SimpleGreetService", "ConceptArchitect.Services.SimpleGreetService\ConceptArchitect.Services.SimpleGreetService.csproj", "{DB226899-5699-4EA3-B0A1-36CBDC060552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceptArchitect.Services.GreetServiceContract", "ConceptArchitect.Services.GreetServiceContract\ConceptArchitect.Services.GreetServiceContract.csproj", "{BA8EBEED-E0FE-45D0-9ECA-CED15A011A37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHostGreet01", "ServiceHostGreet01\ServiceHostGreet01.csproj", "{008FFA60-8D29-42F6-B972-ED252D3D8A91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClientGreet01", "ServiceClientGreet01\ServiceClientGreet01.csproj", "{9B8F9EDD-3477-42C3-9AF8-E9230A4F7282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHostGreet02", "ServiceHostGreet02\ServiceHostGreet02.csproj", "{E406A7B1-38A4-488A-A5DC-6B225DE13EF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClientGreet02", "ServiceClientGreet02\ServiceClientGreet02.csproj", "{303CE725-C47E-4FEF-8BD8-17C45A1376CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB226899-5699-4EA3-B0A1-36CBDC060552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB226899-5699-4EA3-B0A1-36CBDC060552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB226899-5699-4EA3-B0A1-36CBDC060552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB226899-5699-4EA3-B0A1-36CBDC060552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA8EBEED-E0FE-45D0-9ECA-CED15A011A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA8EBEED-E0FE-45D0-9ECA-CED15A011A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA8EBEED-E0FE-45D0-9ECA-CED15A011A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA8EBEED-E0FE-45D0-9ECA-CED15A011A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008FFA60-8D29-42F6-B972-ED252D3D8A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008FFA60-8D29-42F6-B972-ED252D3D8A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008FFA60-8D29-42F6-B972-ED252D3D8A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008FFA60-8D29-42F6-B972-ED252D3D8A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8F9EDD-3477-42C3-9AF8-E9230A4F7282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8F9EDD-3477-42C3-9AF8-E9230A4F7282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8F9EDD-3477-42C3-9AF8-E9230A4F7282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8F9EDD-3477-42C3-9AF8-E9230A4F7282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E406A7B1-38A4-488A-A5DC-6B225DE13EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E406A7B1-38A4-488A-A5DC-6B225DE13EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E406A7B1-38A4-488A-A5DC-6B225DE13EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E406A7B1-38A4-488A-A5DC-6B225DE13EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{303CE725-C47E-4FEF-8BD8-17C45A1376CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{303CE725-C47E-4FEF-8BD8-17C45A1376CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{303CE725-C47E-4FEF-8BD8-17C45A1376CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{303CE725-C47E-4FEF-8BD8-17C45A1376CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E2799D2-9394-483E-B227-2FB077657159}
+	EndGlobalSection
+EndGlobal

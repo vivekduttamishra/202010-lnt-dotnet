@@ -73,22 +73,22 @@ namespace IntCalc01
             InitializeComponent();
         }
 
-        T GetValue<T>(TextBox textBox)
-        {
-            var name = textBox.Name.Replace("TextBox", "");
-            var value = textBox.Text;
-            try
-            {
+        //T GetValue<T>(TextBox textBox)
+        //{
+        //    var name = textBox.Name.Replace("TextBox", "");
+        //    var value = textBox.Text;
+        //    try
+        //    {
                
-                if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException(string.Format("Missing value for '{0}'", name));
-                return (T)Convert.ChangeType(value, typeof(T));
-            }catch(FormatException ex)
-            {
-                throw new ArgumentException(string.Format("Invalid Value for {0} : {1}", name, value));
-            }
+        //        if (string.IsNullOrEmpty(value))
+        //            throw new ArgumentException(string.Format("Missing value for '{0}'", name));
+        //        return (T)Convert.ChangeType(value, typeof(T));
+        //    }catch(FormatException ex)
+        //    {
+        //        throw new ArgumentException(string.Format("Invalid Value for {0} : {1}", name, value));
+        //    }
             
-        }
+        //}
 
         //private void CalculateInterest(object sender, RoutedEventArgs e)
         //{

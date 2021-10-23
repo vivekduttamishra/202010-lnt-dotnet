@@ -1,0 +1,14 @@
+﻿<Application x:Class="IntCalc01.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:IntCalc01"
+             StartupUri="MainWindow.xaml"
+             diag:PresentationTraceSources.TraceLevel="High"
+             
+             >
+    <Application.Resources>
+         
+    </Application.Resources>
+    
+</Application>
