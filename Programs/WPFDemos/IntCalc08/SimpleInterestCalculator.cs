@@ -12,6 +12,17 @@ namespace ConceptArchitect.Finance
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+
+        public bool IsValid { 
+            get 
+            {
+                return Principal >= 1000 && Principal % 1000 == 0
+                        && Rate > 3
+                        && Period >= 6 && Period % 6 == 0;
+            
+            } 
+        }
+
         protected void NotifyPropertyChanged(params string[] properties)
         {
             if (PropertyChanged == null)
