@@ -1,15 +1,59 @@
-﻿using System;
+﻿using ConceptArchitect.Commands;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wpf11Commands
+namespace ConceptArchitect.TaskApi
 {
 
 
     public class TaskManager : System.ComponentModel.INotifyPropertyChanged
     {
+
+        public NavigateNextCommand  NavigateNext { get; set; }
+        public NavigatePreviousCommand NavigatePrevious { get; set; }
+
+        public NavigateFirstCommand NavigateFirst { get; set; }
+
+        public NavigateLastCommand NavigateLast { get; set; }
+
+
+        public TaskManager()
+        {
+            CurrentTask = null;
+
+            LoadTasks(); //dummy load
+            IsNew = true;
+            IsModified = false;
+
+            NavigateFirst = new NavigateFirstCommand(this);
+            NavigateLast = new NavigateLastCommand(this);
+            NavigatePrevious = new NavigatePreviousCommand(this);
+            NavigateNext = new NavigateNextCommand(this);
+
+        }
+
+
+
+
+        private int currentTaskIndex;
+
+        public int CurrentTaskIndex
+        {
+            get { return currentTaskIndex; }
+            set { 
+            
+                currentTaskIndex = value; 
+                RaisePropertyChanged("CurrentTaskIndex"); 
+            
+            }
+        }
+
+
+
 
 
         private Task currentTask;
@@ -17,12 +61,22 @@ namespace Wpf11Commands
         public Task CurrentTask
         {
             get { return currentTask; }
-            set { currentTask = value; IsModified = true;
-                    RaisePropertyChanged("CurrentTask"); }
+            set 
+            { 
+
+                currentTask = value;
+                CurrentTaskIndex = Tasks.IndexOf(CurrentTask);
+                IsNew = false;
+                IsModified = true;
+                Status = "Selected";
+                RaisePropertyChanged("CurrentTask"); 
+            }
         }
 
 
-        public List<Task> Tasks { get; set; } = new List<Task>();
+        //public List<Task> Tasks { get; set; } = new List<Task>();
+
+        public ObservableCollection<Task> Tasks { get; set; } = new ObservableCollection<Task>();
 
 
 
@@ -37,6 +91,17 @@ namespace Wpf11Commands
 
 
 
+        private string status;
+
+        public string Status
+        {
+            get { return status; }
+            set { status = value; RaisePropertyChanged("Status"); }
+        }
+
+
+
+
 
         private bool isModified;
 
@@ -46,25 +111,19 @@ namespace Wpf11Commands
             set { isModified = value; RaisePropertyChanged("IsModified"); }
         }
 
-        public TaskManager()
-        {
-            CurrentTask = new Task();
-            Tasks = new List<Task>();
-            IsNew = true;
-            IsModified = false;
-        }
-
-
+      
         public void AddTask()
         {
             Tasks.Add(CurrentTask);
             IsNew = false;
             IsModified = true;
+           
         }
 
         public void CreateNewTask()
         {
             CurrentTask = new Task();
+            Status = "New Task";
             IsNew = true;
             IsModified = true;
         }
@@ -72,15 +131,26 @@ namespace Wpf11Commands
         public void RemoveTask()
         {
             Tasks.Remove(CurrentTask);
+            RaisePropertyChanged("Tasks");
             IsModified = true;
-            CreateNewTask();
+            CurrentTask = null;
+            //CreateNewTask();
         }
 
         public void Save()
         {
             IsModified = false;
+            Status = "Saved";
         }
 
+        //load dummy tasks
+        public void LoadTasks()
+        {
+            Tasks.Add(new Task() { Title = "Learn WPF Commands", Description = "We Need to understand WPF Commands in Details" });
+            Tasks.Add(new Task() { Title = "Learn Binding", Description = "Different types of Binding help us write less code",Done=true });
+            Tasks.Add(new Task() { Title = "WCF Service", Description = "Implement Service using WCF", Done = true });
+            Tasks.Add(new Task() { Title = "Styles", Description = "Help us create decent app with consistent style" });
+        }
 
 
         [NonSerialized]

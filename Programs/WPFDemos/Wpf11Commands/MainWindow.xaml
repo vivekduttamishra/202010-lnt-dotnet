@@ -4,9 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf11Commands"
+        xmlns:views="clr-namespace:Wpf11Commands.Views"
+        xmlns:util="clr-namespace:ConceptArchitect.Wpf;assembly=ConceptArchitect.Wpf"
+        xmlns:model="clr-namespace:ConceptArchitect.TaskApi"
+        xmlns:c="clr-namespace:ConceptArchitect.Commands"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
+
+    <Window.DataContext>
+        <model:TaskManager/>
+    </Window.DataContext>
 
     <Window.CommandBindings>
         <CommandBinding Command="Help" Executed="HelpCommand" />
@@ -14,47 +22,65 @@
         <CommandBinding Command="New" Executed="NewTaskCommand" />
         <CommandBinding Command="Save" Executed="SaveCommand" />
 
+        <CommandBinding Command="{x:Static c:CustomCommands.DeleteCommand}" Executed="DeleteTaskCommand" CanExecute="CanDelete" />
+        
+        
+        
+
     </Window.CommandBindings>
+
+    <Window.InputBindings>
+        <KeyBinding Command="{x:Static c:CustomCommands.DeleteCommand}" Key="Delete"  Modifiers="Ctrl"/>
+
+        <KeyBinding Command="{Binding NavigatePrevious}" Key="Left"/>
+        <KeyBinding Command="{Binding NavigateNext}" Key="Right"/>
+        <KeyBinding Command="{Binding NavigateFirst}" Key="Left" Modifiers="Ctrl"/>
+        <KeyBinding Command="{Binding NavigateLast}" Key="Right" Modifiers="Ctrl"/>
+
+    </Window.InputBindings>
+    
+
+    
     
     <DockPanel>
         <DockPanel DockPanel.Dock="Top" Background="Black">
-            <WrapPanel DockPanel.Dock="Right"  HorizontalAlignment="Right"    >
-                <Button Command="New" Content="+" FontSize="18" Background="CornflowerBlue" Height="40" Width="40" Margin="5"/>
-                <Button Command="Help"
-                    Content="?" FontSize="18" Background="CornflowerBlue" Height="40" Width="40" Margin="5"/>
-                <Button Command="ApplicationCommands.Close" Content="X" FontSize="18" Background="Red" Height="40" Width="40" Margin="5"/>
-            </WrapPanel>
+            
+            <views:ToolBar DockPanel.Dock="Right"/>
+            <views:NavigationButtons DockPanel.Dock="Right"/>
             <TextBlock Text="Task Manager" Foreground="White" FontSize="25" Margin="5" FontWeight="Bold"/>
         </DockPanel>
-       
 
-        <TextBlock Text="Status" DockPanel.Dock="Bottom" Background="LightGray" FontSize="18" />
+
+        <UniformGrid DockPanel.Dock="Bottom" Background="LightGray" Rows="1">
+            <TextBlock Text="Total Tasks" FontSize="18"/>
+            <TextBlock Text="{Binding Tasks.Count}"   FontSize="18" />
+            <TextBlock Text="New" FontSize="18" Visibility="{Binding IsNew, Converter={util:BoolToVisibilityConverter}}"/>
+            <TextBlock Text="Modified" FontSize="18" Visibility="{Binding IsModified, Converter={util:BoolToVisibilityConverter}}"/>
+            
+        </UniformGrid>
+        
         <Grid Background="LightYellow" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
 
+            <ListBox  Background="LightPink" SelectedItem="{Binding CurrentTask}" ItemsSource="{Binding Tasks}">
 
-            <StackPanel Margin="10">
-                <TextBlock Text="Task" />
-                <TextBox Text="{Binding Title}" />
+            </ListBox>
 
-                <TextBlock Text="Description" />
-                <TextBox Text="{Binding Description}"
-                         TextWrapping="NoWrap"
-                         Height="150"
-                         />
-                
-                <CheckBox IsChecked="{Binding Done}" Content="Is Done"/>
-                <Button Content="Save" Command="Save"/>
-                <Button Content="Delete" />
+            <StackPanel Grid.Column="1" Margin="10" Visibility="{Binding CurrentTask, Converter={util:BoolToVisibilityConverter}}">
+                <views:TaskEditor  DataContext="{Binding CurrentTask}"  />
+                <UniformGrid Margin="5">
+                    
+                    <Button Content="Add Task" Command="Save" Margin="5" IsEnabled="{Binding IsNew}"/>
+                    
+                    <Button Content="Delete" Margin="5"  Command="{x:Static c:CustomCommands.DeleteCommand}"/>
+                </UniformGrid>               
                 
             </StackPanel>
 
-            <ListBox Grid.Column="1" Background="LightPink">
-                
-            </ListBox>
+           
         </Grid>
 
     </DockPanel>

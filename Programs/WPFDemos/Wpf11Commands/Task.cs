@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wpf11Commands
+namespace ConceptArchitect.TaskApi
 {
 
 
@@ -40,7 +40,10 @@ namespace Wpf11Commands
             set { done = value; RaisePropertyChanged("Done"); }
         }
 
-
+        public override string ToString()
+        {
+            return Title;
+        }
 
         [NonSerialized]
         System.ComponentModel.PropertyChangedEventHandler _propertyChanged;

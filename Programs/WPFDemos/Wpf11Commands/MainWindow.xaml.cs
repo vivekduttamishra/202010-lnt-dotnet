@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConceptArchitect.TaskApi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace Wpf11Commands
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        TaskManager manager;
         public MainWindow()
         {
             InitializeComponent();
+            manager = DataContext as TaskManager;
         }
 
         private void HelpCommand(object sender, ExecutedRoutedEventArgs e)
@@ -37,12 +41,28 @@ namespace Wpf11Commands
 
         private void NewTaskCommand(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show("New Task Created");
+            
+            manager.CreateNewTask();
         }
 
         private void SaveCommand(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show("Saved");
+            manager.AddTask();
+        }
+
+        private void DeleteTaskCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+            var response=MessageBox.Show(manager.CurrentTask.Title, "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if(response==MessageBoxResult.Yes)
+            {
+                manager.RemoveTask();
+            }
+        }
+
+        private void CanDelete(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if(manager!=null)
+                e.CanExecute = manager.CurrentTask != null && !manager.IsNew;
         }
     }
 }
